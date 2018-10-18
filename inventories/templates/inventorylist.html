@@ -64,19 +64,19 @@
 			<section id="one" class="wrapper style2">
 				<div class="inner">
 					<div class="grid-style">
-                    {% for store in stores %}
+                    {% for inventory in inventories %}
 						<div>
 							<div class="box">
-								<div class="image fit">
-									<img src="{% static 'images/cart.jpg' %}" alt="" />
-								</div>
+								
 								<div class="content">
 									<header class="align-center">
-										<p>{{store.name}}</p>
+										<p>{{inventory.name}}</p>
 									</header>
-									<p align="center"> {{store.description}}</p>
+									<p align="center"> {{inventory.store}}</p>
+									<p align="center"> {{inventory.is_empty}}</p>
+									<p align="center"> {{inventory.last_updated}}</p>
 									<footer class="align-center">
-										<a href="{% url 'inventories:list' store.id %}" class="button alt">View Products</a>
+										<a href="#" class="button alt">View Products</a>
 									</footer>
 								</div>
 							</div>
